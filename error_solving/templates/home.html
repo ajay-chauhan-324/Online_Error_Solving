@@ -1,13 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- 
-  <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stack Overflow</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #0077cc;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.sidebar {
+    width: 30%;
+    float: left;
+    background-color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.sidebar h2 {
+    color: #0077cc;
+}
+
+.main {
+    width: 67%;
+    float: right;
+    background-color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #0077cc;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    clear: both;
+}
+
+</style>
 </head>
 <body>
- <h1>This is Home page
- </h1>
+
+<header>
+    <div class="container">
+        <h1>Stack Overflow</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Questions</a></li>
+                <li><a href="#">Tags</a></li>
+                <li><a href="#">Users</a></li>
+                <li><a href="#">Ask Question</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="container">
+    <aside>
+        <h2>Top Questions</h2>
+        <ul>
+            <li><a href="#">Question 1</a></li>
+            <li><a href="#">Question 2</a></li>
+            <li><a href="#">Question 3</a></li>
+            <li><a href="#">Question 4</a></li>
+            <li><a href="#">Question 5</a></li>
+        </ul>
+    </aside>
+
+    <main>
+        <h2>Main Content</h2>
+        <div class="question">
+            <h3><a href="#">How to implement a responsive layout using CSS Grid?</a></h3>
+            <p>What are the best practices for implementing a responsive layout using CSS Grid? I've heard it's a powerful tool for creating grid-based layouts, but I'm not sure where to start.</p>
+            <div class="tags">
+                <span class="tag">css</span>
+                <span class="tag">responsive-design</span>
+                <span class="tag">css-grid</span>
+            </div>
+        </div>
+        
+        <div class="question">
+            <h3><a href="#">How to optimize JavaScript code for performance?</a></h3>
+            <p>I have a large JavaScript codebase and I'm noticing some performance issues. What are some techniques for optimizing JavaScript code to improve performance?</p>
+            <div class="tags">
+                <span class="tag">javascript</span>
+                <span class="tag">performance</span>
+                <span class="tag">optimization</span>
+            </div>
+        </div>
+
+        <!-- Additional content -->
+        <div class="additional-content">
+            <h2>Profile</h2>
+            <p>Welcome to your profile! Here you can view and edit your information.</p>
+            <!-- Add more profile content as needed -->
+        </div>
+    </main>
+</div>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2024 Stack Overflow</p>
+    </div>
+</footer>
+
 </body>
 </html>
