@@ -1,5 +1,7 @@
-from django.shortcuts import render , HttpResponse
+from django.shortcuts import render , HttpResponse,redirect
 from django.contrib.auth.models import User
+from app1.models import User
+
 
 # Create your views here.
 def index(request):
@@ -12,11 +14,14 @@ def register(request):
   if request.method=='POST':
     uname=request.POST.get('uname')
     email=request.POST.get('email')
-    pass1=request.POST.get('password1')
-    pass2=request.POST.get('password2')
-    my_user=User.objects.create_user(uname,email,pass1)
+    pass1=request.POST.get('pass1')
+    
+    my_user=User(uname=uname,email=email,pass1=pass1)
     my_user.save()
-  return render(request,'register.html')
+    print(my_user)
+    return redirect('/')
+  else:
+    return render(request,'register.html')
 
 
 def home(request):

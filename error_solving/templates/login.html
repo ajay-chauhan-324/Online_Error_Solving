@@ -64,7 +64,9 @@ button:hover {
 
 <div class="login-container">
   <h2>Login</h2>
-  <form id="loginForm" action="#">
+  
+  <form id="loginForm" action="/login" method="POST">
+    {% csrf_token %}
     <div class="input-group">
       <label for="username">Username</label>
       <input type="text" id="username" name="username" required>
